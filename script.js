@@ -5,6 +5,8 @@ const pokemonId = document.getElementById("pokemon-id");
 const pokemonWeight = document.getElementById("weight");
 const pokemonHeight = document.getElementById("height");
 const spriteContainer = document.getElementById("sprite-container");
+const spriteContainerFemale = document.getElementById("sprite-container-female");
+const spriteContainerShiny = document.getElementById("sprite-container-shiny");
 const pokemonTypes = document.getElementById("types");
 const hp = document.getElementById("hp");
 const attack = document.getElementById("attack");
@@ -32,11 +34,16 @@ const setPokemonInfo = (data) => {
 
   pokemonName.textContent = `${name[0].toUpperCase() + name.slice(1)}`;
   pokemonId.textContent = `#${id}`;
-  pokemonWeight.textContent = `Weight (Kg): ${weight}`;
-  pokemonHeight.textContent = `Height (Meters): ${height}`;
+  pokemonWeight.textContent = `Weight (Kg): ${weight / 10}`;
+  pokemonHeight.textContent = `Height (Meters): ${height / 10}`;
 
-  spriteContainer.innerHTML = `<img id="sprite" src="${sprites.front_default}" alt="${name}">`;
-
+  spriteContainer.innerHTML = `<img id="sprite-default" src="${sprites.front_default}" alt="${name}">`;
+  if (sprites.front_female) {
+    spriteContainerFemale.innerHTML = `<img id="sprite-female" src="${sprites.front_female}" alt="${name}">`;
+  } else {
+    spriteContainerFemale.innerHTML = ''; // Clear the container if no female sprite exists
+  }
+  spriteContainerShiny.innerHTML = `<img id="sprite-shiny" src="${sprites.front_shiny}" alt="${name}">`;
   hp.textContent = `HP: ${stats[0].base_stat}`;
   attack.textContent = `Attack: ${stats[1].base_stat}`;
   defense.textContent = `Defense: ${stats[2].base_stat}`;
