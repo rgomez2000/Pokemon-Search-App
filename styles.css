@@ -1,7 +1,6 @@
 :root {
     --dark-grey: #0a0a23;
     --white: #ffffff;
-    --purple: #6f0fa7;
     font-family:Arial, Helvetica, sans-serif;
   }
   
@@ -25,8 +24,7 @@
   }
   
   #body-container {
-      max-width: 500px;
-      
+      max-width:  700px;
       background-color: var(--white);
       color: var(--white);
       margin: 30px auto 0px;
@@ -51,7 +49,7 @@
   }
 
   #search-button {
-    background-color: var(--purple);
+    background-color: #1f133f;
     border-radius: 14px;
     border: 1px solid black;
     color: var(--white);
@@ -78,10 +76,123 @@
     margin: auto;
     outline: 0;
     border-width: 0 0 2px;
-    border-color: var(--purple)
+    border-color: #1f133f;
 }
   
 #pokemon-container {
-       color: black;
-    font-weight: 400;
+  gap: 10px;
+  color: black;
+  font-weight: 400;
 }
+
+#classification {
+  display: flex;
+  justify-content: center; /* Puts space between name and ID */
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 20px;
+}
+
+#classification div {
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: #1f133f;
+}
+
+#anatomy {
+  display: flex;
+  justify-content: center; /* Puts space between name and ID */
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 20px;
+}
+
+#anatomy div {
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: #1f133f;
+}
+
+#image-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+#image-container > div {
+  background-color: rgb(247, 242, 242); 
+  border-radius: 10px;          
+  padding: 10px;                /* Add some space around the image */
+  text-align: center;           
+  width: 150px;                 
+}
+
+.sprite-text {
+  display: block;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+#image-container > div:empty {
+  display: none; /* Hide containers without images */
+}
+
+#sprite-container img, #sprite-container-female img, #sprite-container-shiny img , #sprite-container-shiny-female img{
+  width: 150px;
+
+}
+
+#types {
+  grid-column: span 2; /* Make types take full width */
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+  justify-content: center;
+}
+
+#types span {
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+}
+
+#stats div {
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 200;
+  background-color: #1f133f;
+}
+
+#stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#types .normal  { background-color: #A8A77A; }
+#types .fire { background-color: #EE8130; }
+#types .water { background-color: #6390F0; }
+#types .electric { background-color: #F7D02C; }
+#types .grass { background-color: #7AC74C; }
+#types .ice { background-color: #96D9D6; }
+#types .fighting { background-color: #C22E28; }
+#types .poison { background-color: #A33EA1; }
+#types .ground { background-color: #E2BF65; }
+#types .flying { background-color: #A98FF3; }
+#types .psychic { background-color: #F95587; }
+#types .bug { background-color: #A6B91A; }
+#types .rock { background-color: #B6A136; }
+#types .ghost { background-color: #735797; }
+#types .dragon { background-color: #6F35FC; }
+#types .dark { background-color: #705746; }
+#types .steel { background-color: #B7B7CE; }
+#types .fairy { background-color: #D685AD; }
