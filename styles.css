@@ -87,7 +87,7 @@
 
 #classification {
   display: flex;
-  justify-content: center; /* Puts space between name and ID */
+  justify-content: center;
   align-items: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -95,15 +95,19 @@
 }
 
 #classification div {
-  padding: 5px 10px;
-  border-radius: 10px;
-  color: white;
-  background-color: #1f133f;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 10px;
+  border-bottom: 3.5px solid #6f0fa7;
+  padding-bottom: 1px; 
+  font-weight: bold;
+  font-size: large;
 }
 
 #anatomy {
   display: flex;
-  justify-content: center; /* Puts space between name and ID */
+  justify-content: center; 
   align-items: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -111,10 +115,14 @@
 }
 
 #anatomy div {
-  padding: 5px 10px;
-  border-radius: 10px;
-  color: white;
-  background-color: #1f133f;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 10px;
+  border-bottom: 3.5px solid #6f0fa7;
+  padding-bottom: 1px; 
+  font-weight: bold;
+  font-size: 16px;
 }
 
 #image-container {
@@ -124,9 +132,9 @@
 }
 
 #image-container > div {
-  background-color: rgb(247, 242, 242); 
+  background-color: #e2e2f8; 
   border-radius: 10px;          
-  padding: 10px;                /* Add some space around the image */
+  padding: 10px;            
   text-align: center;           
   width: 150px;                 
 }
@@ -144,11 +152,10 @@
 
 #sprite-container img, #sprite-container-female img, #sprite-container-shiny img , #sprite-container-shiny-female img{
   width: 150px;
-
 }
 
 #types {
-  grid-column: span 2; /* Make types take full width */
+  grid-column: span 2; 
   display: flex;
   margin-top: 10px;
   gap: 10px;
@@ -162,21 +169,27 @@
   font-weight: bold;
 }
 
-#stats div {
-  padding: 5px 10px;
-  border-radius: 10px;
-  color: white;
-  font-weight: 200;
-  background-color: #1f133f;
+#stats > div:empty {
+  display: none; /* Hide containers without images */
 }
 
 #stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5px;
-  text-align: center;
   margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 20px;
 }
+
+#stats div {
+  background-color: #1f133f;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  
+}
+
 
 #types .normal  { background-color: #A8A77A; }
 #types .fire { background-color: #EE8130; }

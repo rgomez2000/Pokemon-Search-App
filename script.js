@@ -55,6 +55,7 @@ const setPokemonInfo = (data) => {
   spriteContainerShiny.innerHTML = 
   `<img id="sprite-shiny" src="${sprites.front_shiny}" alt="${name}">
    <span class="sprite-text">Shiny</span>`;
+
   hp.textContent = `HP: ${stats[0].base_stat}`;
   attack.textContent = `Attack: ${stats[1].base_stat}`;
   defense.textContent = `Defense: ${stats[2].base_stat}`;
@@ -75,5 +76,4 @@ searchInput.addEventListener("keydown", event => {
     searchButton.click();
   }
 });
-
 
